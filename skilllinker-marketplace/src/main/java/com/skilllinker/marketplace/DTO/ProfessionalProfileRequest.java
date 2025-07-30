@@ -22,7 +22,7 @@ public class ProfessionalProfileRequest {
     @Min(value = 0, message = "Experience years cannot be negative")
     private Integer experienceYear;
 
-    private String document;  // Optional
+    private String document;
 
     @Min(value = 0, message = "Profile views cannot be negative")
     private Integer profileViews;

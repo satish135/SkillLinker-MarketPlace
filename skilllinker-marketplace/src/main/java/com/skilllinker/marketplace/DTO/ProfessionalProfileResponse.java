@@ -21,7 +21,7 @@ public class ProfessionalProfileResponse {
     private Integer profileViews;
     private Boolean activeStatus;
 
-    // Nested for relationships
+
     private UserResponse user;
     private List<BookingResponse> bookings;
     private List<ReviewResponse> reviews;

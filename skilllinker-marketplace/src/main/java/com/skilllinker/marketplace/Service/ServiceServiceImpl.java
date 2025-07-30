@@ -148,7 +148,6 @@ public class ServiceServiceImpl implements ServiceService {
                 .minBookingFee(service.getMinBookingFee())
                 .build();
 
-        // Nested category
         if (service.getCategory() != null) {
             Category category = service.getCategory();
             response.setCategory(CategoryResponse.builder()
@@ -158,7 +157,6 @@ public class ServiceServiceImpl implements ServiceService {
                     .build());
         }
 
-        // Nested bookings
         if (service.getBookings() != null) {
             response.setBookings(service.getBookings().stream()
                     .map(this::mapToBookingResponse)

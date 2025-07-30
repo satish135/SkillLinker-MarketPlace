@@ -26,5 +26,5 @@ public class ReviewRequest {
     @NotNull(message = "Rating is required")
     private Integer rating;
 
-    private String comment;  // Optional
+    private String comment;
 }

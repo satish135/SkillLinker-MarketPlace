@@ -22,7 +22,7 @@ public class GlobalExceptionHandler {
         Map<String, String> error = new HashMap<>();
         error.put("error", "Internal Server Error");
         error.put("message", ex.getMessage());
-        return new ResponseEntity<>(error, HttpStatus.INTERNAL_SERVER_ERROR);  // 500
+        return new ResponseEntity<>(error, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
 
@@ -31,7 +31,7 @@ public class GlobalExceptionHandler {
         Map<String, String> error = new HashMap<>();
         error.put("error", "Bad Request");
         error.put("message", ex.getMessage());
-        return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);  // 400
+        return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
     }
 
 
@@ -42,7 +42,7 @@ public class GlobalExceptionHandler {
         error.put("message", ex.getBindingResult().getFieldErrors().stream()
                 .map(fieldError -> fieldError.getField() + ": " + fieldError.getDefaultMessage())
                 .reduce("", (acc, msg) -> acc + msg + "; "));
-        return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);  // 400
+        return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
     }
 
 

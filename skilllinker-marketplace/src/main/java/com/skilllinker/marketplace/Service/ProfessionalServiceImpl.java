@@ -168,7 +168,6 @@ public class ProfessionalServiceImpl implements ProfessionalService {
         response.setProfileViews(professional.getProfileViews());
         response.setActiveStatus(professional.getActiveStatus());
 
-        // Nested user
         if (professional.getUser() != null) {
             User user = professional.getUser();
             response.setUser(UserResponse.builder()
@@ -184,14 +183,12 @@ public class ProfessionalServiceImpl implements ProfessionalService {
                     .build());
         }
 
-        // Nested bookings
         if (professional.getBookings() != null) {
             response.setBookings(professional.getBookings().stream()
                     .map(this::mapToBookingResponse)
                     .collect(Collectors.toList()));
         }
 
-        // Nested reviews
         if (professional.getReviews() != null) {
             response.setReviews(professional.getReviews().stream()
                     .map(this::mapToReviewResponse)

@@ -19,7 +19,6 @@ public class ServiceResponse {
     private String description;
     private BigDecimal minBookingFee;
 
-    // Nested for relationships
     private CategoryResponse category;
     private List<BookingResponse> bookings;
 }

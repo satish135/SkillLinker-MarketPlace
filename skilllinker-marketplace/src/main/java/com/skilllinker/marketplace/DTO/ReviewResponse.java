@@ -21,7 +21,6 @@ public class ReviewResponse {
     private String comment;
     private LocalDateTime createdAt;
 
-    // Nested for relationships
     private BookingResponse booking;
     private UserResponse reviewer;
     private ProfessionalProfileResponse professional;

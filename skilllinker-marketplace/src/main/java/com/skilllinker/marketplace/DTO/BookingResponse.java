@@ -26,7 +26,6 @@ public class BookingResponse {
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
-    // Nested responses for relationships
     private UserResponse customer;
     private ProfessionalProfileResponse professional;
     private ServiceResponse service;

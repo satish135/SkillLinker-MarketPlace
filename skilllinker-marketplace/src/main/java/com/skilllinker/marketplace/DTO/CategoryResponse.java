@@ -17,6 +17,5 @@ public class CategoryResponse {
     private String name;
     private String description;
 
-    // Nested for relationships
     private List<ServiceResponse> services;
 }

@@ -87,14 +87,14 @@ public class CategoryServiceImpl implements CategoryService {
                 .collect(Collectors.toList());
     }
 
-    // FIXED: Full mapping with nested services (dynamic, handles nulls)
+
     private CategoryResponse mapToResponse(Category category) {
         CategoryResponse response = new CategoryResponse();
         response.setId(category.getId());
         response.setName(category.getName());
         response.setDescription(category.getDescription());
 
-        // Nested services
+
         if (category.getServices() != null) {
             response.setServices(category.getServices().stream()
                     .map(this::mapToServiceResponse)
@@ -104,7 +104,6 @@ public class CategoryServiceImpl implements CategoryService {
         return response;
     }
 
-    // Helper for nested ServiceResponse
     private ServiceResponse mapToServiceResponse(Service service) {
         return ServiceResponse.builder()
                 .id(service.getId())
